@@ -50,7 +50,7 @@ end
 
 solve(agg)
 
-writedlm("P_out.txt", getvalue(P_out))
-writedlm("P_in.txt", getvalue(P_in))
-writedlm("SOC.txt", getvalue(SOC))
+writedlm("results/P_out.txt", getvalue(P_out))
+writedlm("results/P_in.txt", getvalue(P_in))
+writedlm("results/SOC.txt", getvalue(SOC))
 
