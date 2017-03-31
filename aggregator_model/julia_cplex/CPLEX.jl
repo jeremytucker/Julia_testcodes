@@ -2,12 +2,8 @@ __precompile__()
 
 module CPLEX
 
-    if is_apple()
-        Libdl.dlopen("libstdc++",Libdl.RTLD_GLOBAL)
-    end
-
-    if isfile(joinpath(dirname(@__FILE__),"..","deps","deps.jl"))
-        include("../deps/deps.jl")
+    if isfile(joinpath(dirname(@__FILE__),"deps.jl"))
+        include("../deps.jl")
     else
         error("CPLEX not properly installed. Please run Pkg.build(\"CPLEX\")")
     end
