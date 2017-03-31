@@ -1,6 +1,5 @@
 #Packages
 using JuMP
-using Gurobi
 using DataFrames
 
 #data 
@@ -12,7 +11,7 @@ prices = convert(Array,data_p[ini:(ini+time-1),end]);
 car = convert(Array,data_c);
 
 # JuMP model 
-agg = Model(solver=GurobiSolver(Presolve=1, InfUnbdInfo=1))
+agg = Model(solver=CplexSolver())
 #Parameters
 availability = car #[0-1]
 contract_limit = 0.8 #[%]
