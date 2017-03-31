@@ -22,7 +22,7 @@
 #SBATCH --mail-type=all
 #
 # Mail user:
-#SBATCH --mail-user=fcastro@berkeley.edu
+#SBATCH --mail-user=jdlara@berkeley.edu
 #
 ## Run the initialization of the z_problem
 module load matlab

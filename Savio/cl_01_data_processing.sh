@@ -24,7 +24,7 @@
 #SBATCH --mail-type=all
 #
 # Mail user:
-#SBATCH --mail-user=fcastro@berkeley.edu
+#SBATCH --mail-user=jdlara@berkeley.edu
 #
 # Wall clock limit:
 #SBATCH --time=01:00:00

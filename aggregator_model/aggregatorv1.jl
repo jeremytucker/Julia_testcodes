@@ -1,6 +1,7 @@
 #Packages
 using JuMP
 using DataFrames
+using CSV
 cplex_path = joinpath(dirname(@__FILE__),"julia_cplex")
 push!(LOAD_PATH, cplex_path)
 using CPLEX
@@ -48,4 +49,8 @@ end
 @objective(agg, Max, sum(prices[t]/1000*(P_out[t] - P_in[t]) for t in 1:time));
 
 solve(agg)
+
+writedlm("P_out.txt", getvalue(P_out))
+writedlm("P_in.txt", getvalue(P_in))
+writedlm("SOC.txt", getvalue(SOC))
 

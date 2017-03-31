@@ -24,7 +24,7 @@
 # --mail-type=all
 #
 # Mail user:
-#SBATCH --mail-user=fcastro@berkeley.edu
+#SBATCH --mail-user=jdlara@berkeley.edu
 
 module load matlab
 matlab -nosplash -nodisplay -r "cl_03_solve_x_model(${SLURM_ARRAY_TASK_ID})"
