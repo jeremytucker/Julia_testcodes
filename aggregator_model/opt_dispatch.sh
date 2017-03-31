@@ -29,5 +29,6 @@
 #
 
 module load julia
-julia aggregator.jl 
+rm -f *.out
+julia aggregatorv1.jl 
 env
