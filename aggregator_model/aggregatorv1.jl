@@ -14,7 +14,7 @@ end
 
 
 #data 
-time = 2000 #[hrs]
+time = 3000 #[hrs]
 data_p = readtable("CA_Weighted_Price_Case0.csv");
 data_c = readtable("car_profile.csv");
 ini = 1;
