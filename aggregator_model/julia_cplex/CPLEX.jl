@@ -3,7 +3,7 @@ __precompile__()
 module CPLEX
 
     if isfile(joinpath(dirname(@__FILE__),"deps.jl"))
-        include("../deps.jl")
+        include("deps.jl")
     else
         error("CPLEX not properly installed. Please run Pkg.build(\"CPLEX\")")
     end
