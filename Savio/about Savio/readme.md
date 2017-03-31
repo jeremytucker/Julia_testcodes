@@ -1,7 +1,7 @@
 % Savio introductory training: Basic usage of the Berkeley Savio high-performance computing cluster
 % August 2, 2016
 
-I have copied this file from the Savio introductory training August 2, 2016 because it explain very well how Savio works. The original source is [https://github.com/ucberkeley/savio-training-intro-2016/blob/master/intro.md](this file)
+I have copied this file from the Savio introductory training August 2, 2016 because it explain very well how Savio works. The original source is [This file](https://github.com/ucberkeley/savio-training-intro-2016/blob/master/intro.md)
 
 # Introduction
 
