@@ -2,12 +2,19 @@
 using JuMP
 using DataFrames
 using CSV
-cplex_path = joinpath(dirname(@__FILE__),"julia_cplex")
-push!(LOAD_PATH, cplex_path)
-using CPLEX
+if is_linux()
+    cplex_path = joinpath(dirname(@__FILE__),"julia_cplex")
+    push!(LOAD_PATH, cplex_path)
+    using CPLEX
+end 
+
+if is_apple()
+    using Gurobi
+end    
+
 
 #data 
-time = 8700 #[hrs]
+time = 100 #[hrs]
 data_p = readtable("CA_Weighted_Price_Case0.csv");
 data_c = readtable("car_profile.csv");
 ini = 1;
@@ -15,7 +22,15 @@ prices = convert(Array,data_p[ini:(ini+time-1),end]);
 car = convert(Array,data_c);
 
 # JuMP model 
-agg = Model(solver=CplexSolver(CPX_PARAM_EPOPT=1e-02))
+if is_linux()
+    agg = Model(solver=CplexSolver(CPX_PARAM_EPOPT=1e-02))
+end 
+
+if is_apple()
+    agg = Model(solver=GurobiSolver(Presolve=1, InfUnbdInfo=1))
+end  
+
+
 #Parameters
 availability = car #[0-1]
 contract_limit = 0.8 #[%]
@@ -40,6 +55,7 @@ k_SOC = availability #[0-1]
 end 
 
 @constraints agg begin
+    0 <= sum(prices[t]/1000*(P_out[t] - P_in[t]) for t in 1:time)
     P_in[1:time] .<=  P_max_in*k_power[1:time].*control[1:time]
     P_out[1:time] .<=  P_max_out*k_power[1:time].*(1-control[1:time])
     SOC[1] == SOC_ini + (eff_in)*P_in[1] - (1/eff_out)*P_out[1]
