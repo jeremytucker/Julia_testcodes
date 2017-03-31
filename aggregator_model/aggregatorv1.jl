@@ -1,6 +1,9 @@
 #Packages
 using JuMP
 using DataFrames
+cplex_path = joinpath(dirname(@__FILE__),"julia_cplex")
+push!(LOAD_PATH, cplex_path)
+using CPLEX
 
 #data 
 time = 24 #[hrs]
