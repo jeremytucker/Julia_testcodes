@@ -3,7 +3,7 @@ using JuMP
 using DataFrames
 
 #data 
-time = 6000 #[hrs]
+time = 24 #[hrs]
 data_p = readtable("CA_Weighted_Price_Case0.csv");
 data_c = readtable("car_profile.csv");
 ini = 1;
