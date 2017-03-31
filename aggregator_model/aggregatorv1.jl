@@ -15,7 +15,7 @@ prices = convert(Array,data_p[ini:(ini+time-1),end]);
 car = convert(Array,data_c);
 
 # JuMP model 
-agg = Model(solver=CplexSolver())
+agg = Model(solver=CplexSolver(CPX_PARAM_EPOPT=1e-02))
 #Parameters
 availability = car #[0-1]
 contract_limit = 0.8 #[%]
