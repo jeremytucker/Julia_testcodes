@@ -6,7 +6,7 @@ push!(LOAD_PATH, cplex_path)
 using CPLEX
 
 #data 
-time = 24 #[hrs]
+time = 8760 #[hrs]
 data_p = readtable("CA_Weighted_Price_Case0.csv");
 data_c = readtable("car_profile.csv");
 ini = 1;
