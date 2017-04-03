@@ -1,0 +1,136 @@
+Tried aggregator 2 times.
+MIP Presolve eliminated 2 rows and 2 columns.
+Aggregator did 1 substitutions.
+Reduced MIP has 8998 rows, 11997 columns, and 29991 nonzeros.
+Reduced MIP has 2999 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (19.16 ticks)
+Found incumbent of value 785645.194934 after 0.06 sec. (38.80 ticks)
+Probing fixed 0 vars, tightened 250 bounds.
+Probing time = 0.01 sec. (1.33 ticks)
+Tried aggregator 1 time.
+MIP Presolve modified 500 coefficients.
+Reduced MIP has 8998 rows, 11997 columns, and 29991 nonzeros.
+Reduced MIP has 2999 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (15.84 ticks)
+Probing time = 0.01 sec. (0.98 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 20 threads.
+Root relaxation solution time = 0.07 sec. (80.36 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       785645.1949   8.22992e+08              --- 
+*     0+    0                       807111.6701   8.22992e+08              --- 
+      0     0   2.95252e+08    68   807111.6701   2.95252e+08     1609     --- 
+*     0+    0                       2.91543e+08   2.95252e+08             1.27%
+      0     0   2.95084e+08    61   2.91543e+08      Cuts: 37     1625    1.21%
+*     0+    0                       2.91588e+08   2.95084e+08             1.20%
+      0     2   2.95084e+08    61   2.91588e+08   2.95084e+08     1625    1.20%
+Elapsed time = 0.72 sec. (430.93 ticks, tree = 0.01 MB, solutions = 4)
+*     4+    4                       2.91641e+08   2.95082e+08             1.18%
+*    35+   35                       2.91695e+08   2.95081e+08             1.16%
+     38    40   2.95078e+08    61   2.91695e+08   2.95081e+08     1719    1.16%
+*    50+   50                       2.91844e+08   2.95081e+08             1.11%
+     50    52   2.94645e+08    59   2.91844e+08   2.95081e+08     1734    1.11%
+     51    53   2.94642e+08    59   2.91844e+08   2.95081e+08     1735    1.11%
+     81    83   2.95075e+08    61   2.91844e+08   2.95081e+08     1795    1.11%
+     82    84   2.94982e+08    62   2.91844e+08   2.95081e+08     1796    1.11%
+     83    85   2.94531e+08    57   2.91844e+08   2.95081e+08     1797    1.11%
+     84    86   2.94427e+08    56   2.91844e+08   2.95081e+08     1798    1.11%
+     85    87   2.94580e+08    56   2.91844e+08   2.95081e+08     1799    1.11%
+     86    88   2.94331e+08    56   2.91844e+08   2.95081e+08     1800    1.11%
+*  1743+ 1714                       2.91899e+08   2.95081e+08             1.09%
+   2823  2331   2.94767e+08    55   2.91899e+08   2.95081e+08     8802    1.09%
+Elapsed time = 2.12 sec. (1385.03 ticks, tree = 3.30 MB, solutions = 9)
+*  3643+ 2993                       2.91921e+08   2.95081e+08             1.08%
+*  3643+ 2993                       2.92106e+08   2.95081e+08             1.02%
+*  3643+ 2993                       2.92155e+08   2.95081e+08             1.00%
+
+Mixed integer rounding cuts applied:  24
+Gomory fractional cuts applied:  10
+
+Root node processing (before b&c):
+  Real time             =    0.66 sec. (423.01 ticks)
+Parallel b&c, 20 threads:
+  Real time             =    2.28 sec. (1607.22 ticks)
+  Sync time (average)   =    0.63 sec.
+  Wait time (average)   =    0.81 sec.
+                          ------------
+Total (root+branch&cut) =    2.94 sec. (2030.23 ticks)
+MKLROOT=/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+SLURM_NODELIST=n0015.savio1
+MANPATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/share/man:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/man/en_US:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/share/man:/usr/share/man
+SLURM_JOB_NAME=aggregator
+SLURMD_NODENAME=n0015.savio1
+SLURM_TOPOLOGY_ADDR=ib-savio.ib-savio-00.n0015.savio1
+HOSTNAME=n0015.savio1
+SLURM_PRIO_PROCESS=0
+SLURM_NODE_ALIASES=(null)
+SHELL=/bin/bash
+TERM=xterm-256color
+SLURM_JOB_QOS=savio_normal
+HISTSIZE=1000
+TMPDIR=/tmp
+SLURM_TOPOLOGY_ADDR_PATTERN=switch.switch.node
+SSH_CLIENT=10.142.114.6 63404 22
+LIBRARY_PATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/lib/julia:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/lib/intel64:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/lib64:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/lib
+GCC_DIR=/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5
+FPATH=/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include/fftw:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include
+SSH_TTY=/dev/pts/23
+SLURM_NNODES=1
+USER=jdlara
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+LD_LIBRARY_PATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/lib/julia:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/lib/intel64:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/lib64:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/lib:/global/home/users/jdlara/gurobi652/linux64/lib
+CPATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/include:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include/fftw:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/include
+SLURM_JOBID=1221967
+NLSPATH=/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/lib/intel64/locale/en_US
+SLURM_TASKS_PER_NODE=20
+PATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/bin:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/global/home/groups/allhands/bin:/global/home/users/jdlara/gurobi652/linux64/bin:/global/home/users/jdlara/bin:/global/home/users/jdlara/gurobi652/linux64/bin
+MAIL=/var/spool/mail/jdlara
+SLURM_JOB_ID=1221967
+SLURM_JOB_USER=jdlara
+PWD=/global/home/users/jdlara/Julia_testcodes/aggregator_model
+_LMFILES_=/global/software/sl-6.x86_64/modfiles/langs/gcc/4.8.5:/global/software/sl-6.x86_64/modfiles/gcc/4.8.5/mkl/2015.6.233:/global/software/sl-6.x86_64/modfiles/langs/julia/0.5.0
+CUDA_VISIBLE_DEVICES=NoDevFiles
+MODULEPATH=/global/software/sl-6.x86_64/modfiles/tools:/global/software/sl-6.x86_64/modfiles/langs:/global/software/sl-6.x86_64/modfiles/julia/0.5.0:/global/software/sl-6.x86_64/modfiles/gcc/4.8.5
+SLURM_JOB_UID=42745
+LOADEDMODULES=gcc/4.8.5:mkl/2015.6.233:julia/0.5.0
+SLURM_NODEID=0
+SLURM_SUBMIT_DIR=/global/home/users/jdlara/Julia_testcodes/aggregator_model
+SLURM_TASK_PID=65243
+LM_LICENSE_FILE=28518@lmgr0.hpcs.lbl.gov
+SLURM_CPUS_ON_NODE=20
+JULIA_DIR=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0
+SLURM_PROCID=0
+ENVIRONMENT=BATCH
+HISTCONTROL=ignoredups
+ALLHANDS_BASHRC=1
+MKL_DIR=/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl
+SLURM_JOB_NODELIST=n0015.savio1
+HOME=/global/home/users/jdlara
+SHLVL=2
+SLURM_LOCALID=0
+SLURM_JOB_CPUS_PER_NODE=20
+SLURM_CLUSTER_NAME=brc
+SLURM_GTIDS=0
+SLURM_SUBMIT_HOST=ln001
+SLURM_JOB_PARTITION=savio
+LOGNAME=jdlara
+CVS_RSH=ssh
+GPU_DEVICE_ORDINAL=NoDevFiles
+SLURM_JOB_ACCOUNT=fc_emac
+SSH_CONNECTION=10.142.114.6 63404 10.0.0.21 22
+SLURM_JOB_NUM_NODES=1
+MODULESHOME=/usr/Modules
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+INFOPATH=/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/share/info
+INCLUDE=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/include:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include/fftw:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/include
+SLURM_MEM_PER_NODE=64000
+G_BROKEN_FILENAMES=1
+BASH_FUNC_module()=() {  logger "$HOSTNAME $USER: module $*";
+ eval `/usr/Modules/bin/modulecmd bash $*`
+}
+_=/bin/env
