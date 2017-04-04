@@ -1,6 +1,6 @@
 #!/bin/bash
 # Job name:
-#SBATCH --job-name=aggregator
+#SBATCH --job-name=compiler
 #
 # Account:
 #SBATCH --account=fc_emac
@@ -28,6 +28,8 @@
 #SBATCH --time=05:00:00
 #
 mkdir exec_folder
-module load julia
-julia compilation_test.jl 
+#module load julia
+module load gcc intel
+gcc -v
+#julia compilation_test.jl 
 env
