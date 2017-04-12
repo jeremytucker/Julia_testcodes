@@ -34,7 +34,7 @@
 #
 
 for file in Price_profiles/*.csv; 
-    do sbatch aggregator "$file"
+    do sbatch aggregator_solve.sh "$file"
 done
 
 env
