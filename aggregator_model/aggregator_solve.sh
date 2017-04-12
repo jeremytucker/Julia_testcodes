@@ -27,3 +27,4 @@
 
 module load julia
 julia aggregator_multiple.jl $1 $SLURM_JOB_ID; 
+env
