@@ -2,6 +2,7 @@
 using JuMP
 using DataFrames
 
+
 if is_linux()
     cplex_path = joinpath(dirname(@__FILE__),"julia_cplex")
     push!(LOAD_PATH, cplex_path)
@@ -23,7 +24,7 @@ end
 
 #data 
 time = 24 #[hrs]
-data_p = readtable("CA_Weighted_Price_Case0.csv")
+data_p = readtable(ARGS[1])
 data_c = readtable("car_profile_multiple.csv")
 ini = 1
 prices = convert(Array,data_p[ini:(ini+time-1),end])
@@ -65,7 +66,7 @@ end
 
 solve(agg)
 
-writedlm("results_multi/P_out.txt", getvalue(P_out))
-writedlm("results_multi/P_in.txt", getvalue(P_in))
-writedlm("results_multi/SOC.txt", getvalue(SOC))
+writedlm("results_multi/P_out$(ARGS[2]).txt", getvalue(P_out))
+writedlm("results_multi/P_in$(ARGS[2]).txt", getvalue(P_in))
+writedlm("results_multi/SOC$(ARGS[2]).txt", getvalue(SOC))
 
