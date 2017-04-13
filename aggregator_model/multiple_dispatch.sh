@@ -15,7 +15,7 @@
 #SBATCH --nodes=1
 #
 # Specify one task:
-#SBATCH --nodes=1]
+#SBATCH --nodes=1
 #
 # Specify one task:
 #SBATCH --ntasks-per-node=1
@@ -33,6 +33,10 @@
 #SBATCH --time=05:00:00
 #
 
+
+
 for file in Price_profiles/*.csv; 
-    do sbatch aggregator_solve.sh "$file"
+	do 
+	echo "$file"
+	sbatch aggregator_solve.sh "$file"
 done
