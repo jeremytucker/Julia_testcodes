@@ -12,6 +12,14 @@ if is_apple()
     using Gurobi
 end    
 
+# JuMP model 
+if is_linux()
+    agg = Model(solver=CplexSolver(CPX_PARAM_EPGAP=1e-04))
+end 
+
+if is_apple()
+    agg = Model(solver=GurobiSolver(Presolve=1, InfUnbdInfo=1))
+end  
 
 #data 
 time = 8750 #[hrs]
@@ -21,14 +29,6 @@ ini = 1;
 prices = convert(Array,data_p[ini:(ini+time-1),end]);
 car = convert(Array,data_c);
 
-# JuMP model 
-if is_linux()
-    agg = Model(solver=CplexSolver(CPX_PARAM_EPGAP=1e-04))
-end 
-
-if is_apple()
-    agg = Model(solver=GurobiSolver(Presolve=1, InfUnbdInfo=1))
-end  
 
 
 #Parameters
