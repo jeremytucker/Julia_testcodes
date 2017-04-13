@@ -23,7 +23,7 @@ if is_apple()
 end  
 
 #data 
-time = 24 #[hrs]
+time = 8759 #[hrs]
 data_p = readtable(ARGS[1])
 data_c = readtable("car_profile_multiple.csv")
 ini = 1
