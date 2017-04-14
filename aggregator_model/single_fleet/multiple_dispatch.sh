@@ -16,7 +16,12 @@
 #
 # Specify one task:
 #SBATCH --nodes=1
-#SBATCH --exclusive
+#
+# Specify one task:
+#SBATCH --ntasks-per-node=1
+#
+# Number of processors for single task needed for use case (example):
+#SBATCH --cpus-per-task=1
 #
 # Mail type:
 #SBATCH --mail-type=all
@@ -28,8 +33,8 @@
 #SBATCH --time=05:00:00
 #
 
-module load julia
-
-julia aggregator_single.jl Price_profiles/CA_Weighted_Price_Case0.csv $SLURM_JOB_ID
-
-env
+for file in Price_profiles/*.csv; 
+	do 
+	echo "$file"
+	sbatch aggregator_solve.sh "$file"
+done

@@ -65,7 +65,7 @@ end
 
 solve(agg)
 
-writedlm("results/P_out.txt", getvalue(P_out))
-writedlm("results/P_in.txt", getvalue(P_in))
-writedlm("results/SOC.txt", getvalue(SOC))
+writedlm("results/P_out$(ARGS[2]).txt", getvalue(P_out))
+writedlm("results/P_in$(ARGS[2]).txt", getvalue(P_in))
+writedlm("results/SOC$(ARGS[2]).txt", getvalue(SOC))
 

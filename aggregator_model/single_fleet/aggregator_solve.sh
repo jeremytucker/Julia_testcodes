@@ -11,25 +11,20 @@
 # Partition:
 #SBATCH --partition=savio
 #
-# Request one node:
-#SBATCH --nodes=1
+# Wall clock limit:
+#SBATCH --time=10:00:30
 #
-# Specify one task:
+# Processors:
 #SBATCH --nodes=1
 #SBATCH --exclusive
 #
 # Mail type:
-#SBATCH --mail-type=all
+# --mail-type=all
 #
 # Mail user:
-#SBATCH --mail-user=jdlara@berkeley.edu
-#
-# Wall clock limit:
-#SBATCH --time=05:00:00
+# --mail-user=jdlara@berkeley.edu
 #
 
 module load julia
-
-julia aggregator_single.jl Price_profiles/CA_Weighted_Price_Case0.csv $SLURM_JOB_ID
-
+julia aggregator_single.jl $1 $SLURM_JOB_ID; 
 env

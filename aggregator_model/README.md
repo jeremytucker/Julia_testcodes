@@ -15,10 +15,8 @@ This is work in progress and the current version of the implementation works as 
 
 - In order to use the local version of the module files, I used these two lines to tell the aggregator file ```aggregatorv1.jl``` to look for the module locally 
 ~~~ Julia
-cplex_path = joinpath(dirname(@__FILE__),"julia_cplex")
+cplex_path = "../julia_cplex")
 push!(LOAD_PATH, cplex_path)
 ~~~
 
-- The problem is dispatched into the cluster using the shell file ```opt_dipatch.sh```
-
-**So far this implementation works** 
+- Two versions of the model are stored in each respective folder. Single fleet dispatches the EVs considering one type of fleet behavior. Multiple fleet dispatches the EV's considering different types of behaviours. 
