@@ -30,5 +30,5 @@
 
 module load julia
 
-julia aggregatorv1.jl 
+julia aggregator_single.jl 
 env
