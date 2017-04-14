@@ -11,4 +11,6 @@ In order to model the requirements of the grid a representative price profile fo
 
 The mathematical model of the aggregator is as follows: 
 
-$$x = 2$$
+$$
+x = 2
+$$
