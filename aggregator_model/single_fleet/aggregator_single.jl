@@ -2,8 +2,9 @@
 using JuMP
 using DataFrames
 using CSV
+
 if is_linux()
-    cplex_path = joinpath(dirname(@__FILE__),"julia_cplex")
+    cplex_path = "../julia_cplex"
     push!(LOAD_PATH, cplex_path)
     using CPLEX
 end 
@@ -23,13 +24,11 @@ end
 
 #data 
 time = 8750 #[hrs]
-data_p = readtable("CA_Weighted_Price_Case0.csv");
+data_p = readtable(ARGS[1]);
 data_c = readtable("car_profile.csv");
 ini = 1;
 prices = convert(Array,data_p[ini:(ini+time-1),end]);
 car = convert(Array,data_c);
-
-
 
 #Parameters
 availability = car #[0-1]

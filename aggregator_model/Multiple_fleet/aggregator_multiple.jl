@@ -4,7 +4,7 @@ using DataFrames
 
 
 if is_linux()
-    cplex_path = joinpath(dirname(@__FILE__),"julia_cplex")
+    cplex_path = "../julia_cplex"
     push!(LOAD_PATH, cplex_path)
     using CPLEX
 end 
