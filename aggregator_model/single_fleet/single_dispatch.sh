@@ -30,5 +30,5 @@
 
 module load julia
 
-julia aggregator_single.jl 
+julia aggregator_single.jl Price_profiles/CA_Weighted_Price_Case0.csv 
 env
