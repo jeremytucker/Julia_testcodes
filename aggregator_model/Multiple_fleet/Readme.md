@@ -9,5 +9,5 @@ In order to model the requirements of the grid a representative price profile fo
 - Case1 - State-wide Electric Vehicle Fleet is large and unmanaged i.e., no smart charging. 
 - Case2 - State-wide Electric Vehicle Fleet is large and operated with smart charging.
 
-The mathematical model of the aggregator is as follows: 
+The mathematical model of the aggregator is as follows $x$:  
 
