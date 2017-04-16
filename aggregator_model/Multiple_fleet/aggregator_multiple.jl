@@ -25,7 +25,7 @@ end
 #data 
 time = 8759 #[hrs]
 data_p = readtable(ARGS[1])
-data_c = readtable("car_profiles/car_profile_multiple.csv")
+data_c = readtable("car_profiles/car_profile_commercial.csv")
 ini = 1
 prices = convert(Array,data_p[ini:(ini+time-1),end])
 car_availability = convert(Array,data_c)
