@@ -1,0 +1,81 @@
+ERROR: LoadError: BoundsError: attempt to access 0-element Array{String,1} at index [1]
+ in getindex(::Array{String,1}, ::Int64) at ./array.jl:386
+ in include_from_node1(::String) at ./loading.jl:488
+ in process_options(::Base.JLOptions) at ./client.jl:262
+ in _start() at ./client.jl:318
+while loading /global/home/users/jdlara/Julia_testcodes/aggregator_model/single_fleet/aggregator_single.jl, in expression starting on line 27
+MKLROOT=/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+SLURM_NODELIST=n0020.savio1
+MANPATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/share/man:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/man/en_US:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/share/man:/usr/share/man
+SLURM_JOB_NAME=aggregator
+SLURMD_NODENAME=n0020.savio1
+SLURM_TOPOLOGY_ADDR=ib-savio.ib-savio-00.n0020.savio1
+HOSTNAME=n0020.savio1
+SLURM_PRIO_PROCESS=0
+SLURM_NODE_ALIASES=(null)
+SHELL=/bin/bash
+TERM=xterm-256color
+SLURM_JOB_QOS=savio_normal
+HISTSIZE=1000
+TMPDIR=/tmp
+SLURM_TOPOLOGY_ADDR_PATTERN=switch.switch.node
+SSH_CLIENT=10.142.114.66 53400 22
+LIBRARY_PATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/lib/julia:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/lib/intel64:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/lib64:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/lib
+GCC_DIR=/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5
+FPATH=/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include/fftw:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include
+SSH_TTY=/dev/pts/145
+SLURM_NNODES=1
+USER=jdlara
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+LD_LIBRARY_PATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/lib/julia:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/lib/intel64:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/lib64:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/lib:/global/home/users/jdlara/gurobi652/linux64/lib
+CPATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/include:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include/fftw:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/include
+SLURM_JOBID=1269865
+NLSPATH=/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/lib/intel64/locale/en_US
+SLURM_TASKS_PER_NODE=20
+PATH=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/bin:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/global/home/groups/allhands/bin:/global/home/users/jdlara/gurobi652/linux64/bin:/global/home/users/jdlara/bin:/global/home/users/jdlara/gurobi652/linux64/bin
+MAIL=/var/spool/mail/jdlara
+SLURM_JOB_ID=1269865
+SLURM_JOB_USER=jdlara
+PWD=/global/home/users/jdlara/Julia_testcodes/aggregator_model/single_fleet
+_LMFILES_=/global/software/sl-6.x86_64/modfiles/langs/gcc/4.8.5:/global/software/sl-6.x86_64/modfiles/gcc/4.8.5/mkl/2015.6.233:/global/software/sl-6.x86_64/modfiles/langs/julia/0.5.0
+CUDA_VISIBLE_DEVICES=NoDevFiles
+MODULEPATH=/global/software/sl-6.x86_64/modfiles/tools:/global/software/sl-6.x86_64/modfiles/langs:/global/software/sl-6.x86_64/modfiles/julia/0.5.0:/global/software/sl-6.x86_64/modfiles/gcc/4.8.5
+SLURM_JOB_UID=42745
+LOADEDMODULES=gcc/4.8.5:mkl/2015.6.233:julia/0.5.0
+SLURM_NODEID=0
+SLURM_SUBMIT_DIR=/global/home/users/jdlara/Julia_testcodes/aggregator_model/single_fleet
+SLURM_TASK_PID=56904
+LM_LICENSE_FILE=28518@lmgr0.hpcs.lbl.gov
+SLURM_CPUS_ON_NODE=20
+JULIA_DIR=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0
+SLURM_PROCID=0
+ENVIRONMENT=BATCH
+HISTCONTROL=ignoredups
+ALLHANDS_BASHRC=1
+MKL_DIR=/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl
+SLURM_JOB_NODELIST=n0020.savio1
+HOME=/global/home/users/jdlara
+SHLVL=2
+SLURM_LOCALID=0
+SLURM_JOB_CPUS_PER_NODE=20
+SLURM_CLUSTER_NAME=brc
+SLURM_GTIDS=0
+SLURM_SUBMIT_HOST=ln003.brc
+SLURM_JOB_PARTITION=savio
+LOGNAME=jdlara
+CVS_RSH=ssh
+GPU_DEVICE_ORDINAL=NoDevFiles
+SLURM_JOB_ACCOUNT=fc_emac
+SSH_CONNECTION=10.142.114.66 53400 10.0.0.23 22
+SLURM_JOB_NUM_NODES=1
+MODULESHOME=/usr/Modules
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+INFOPATH=/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/share/info
+INCLUDE=/global/software/sl-6.x86_64/modules/langs/julia/0.5.0/include:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include/fftw:/global/software/sl-6.x86_64/modules/langs/intel/2015.6.233/mkl/include:/global/software/sl-6.x86_64/modules/langs/gcc/4.8.5/include
+SLURM_MEM_PER_NODE=64000
+G_BROKEN_FILENAMES=1
+BASH_FUNC_module()=() {  logger "$HOSTNAME $USER: module $*";
+ eval `/usr/Modules/bin/modulecmd bash $*`
+}
+_=/bin/env

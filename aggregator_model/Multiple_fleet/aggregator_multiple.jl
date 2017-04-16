@@ -35,7 +35,7 @@ fleet_size = ones(fleet_types)*1000
 #Parameters
 k_SOC = car_availability #[0-1] 
 k_power = car_availability #[0-1]
-contract_limit = 0.8 #[%]
+contract_limit = 0.6 #[%]
 bat_size = 30 #[kWh], based on the Nissan Leaf 
 charger_power = 7.2 #[kW], based on a 30 Amp Charger
 eff_in = 0.85 #[%]
