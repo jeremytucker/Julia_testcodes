@@ -23,7 +23,7 @@ if is_apple()
 end  
 
 #data 
-time = 8759 #[hrs]
+time = 8760  #[hrs]
 data_p = readtable(ARGS[1])
 data_c = readtable("car_profiles/car_profile_multiple.csv")
 ini = 1
@@ -64,6 +64,7 @@ end
 
 @objective(agg, Max, sum(sum(prices[t]/1000*(P_out[t,f] - P_in[t,f]) for t in 1:time) for f in 1:fleet_types));
 
+writeLP(agg, "lp_file.lp", genericnames=false)
 solve(agg)
 
 writedlm("results_multi/P_out$(ARGS[2]).txt", getvalue(P_out))
