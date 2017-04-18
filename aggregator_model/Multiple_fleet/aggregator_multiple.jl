@@ -50,6 +50,8 @@ SOC_ini = fleet_size.*bat_size*0.05 #[kWh]
 @variables agg begin
     P_in[1:time, 1:fleet_types] >= 0
     P_out[1:time, 1:fleet_types] >= 0
+    P_in[1:time, 1:fleet_types] >= 0
+    P_out[1:time, 1:fleet_types] >= 0
     SOC_min[t, f] <= SOC[t = 1:time, f = 1:fleet_types] <= SOC_max[t, f]
     control[t = 1:time, f = 1:fleet_types],  Bin
 end 
@@ -58,8 +60,8 @@ end
     0 <= sum(sum(prices[t]/1000*(P_out[t,f] - P_in[t,f]) for t in 1:time) for f in 1:fleet_types)
     P_in[t = 1:time, f = 1:fleet_types] .<=  P_max_in[t,f].*control[t, f]
     P_out[t = 1:time, f = 1:fleet_types] .<=  P_max_in[t,f].*(ones(time, fleet_types)-control[1:time, f])
-    SOC[1, 1:fleet_types] .== SOC_ini[1:fleet_types] + (eff_in)*P_in[1, 1:fleet_types] - (1/eff_out)*P_out[1, 1:fleet_types]
-    SOC[2:time, 1:fleet_types] .== SOC[1:time-1, 1:fleet_types] + (eff_in)*P_in[2:time, 1:fleet_types] - (1/eff_out)*P_out[2:time, 1:fleet_types]
+    #SOC[1, 1:fleet_types] .== SOC_ini[1:fleet_types] + (eff_in)*P_in[1, 1:fleet_types] - (1/eff_out)*P_out[1, 1:fleet_types]
+    SOC[1:time, 1:fleet_types] .== (eff_in)*P_in[2:time, 1:fleet_types] - (1/eff_out)*P_out[2:time, 1:fleet_types]
 end
 
 @objective(agg, Max, sum(sum(prices[t]/1000*(P_out[t,f] - P_in[t,f]) for t in 1:time) for f in 1:fleet_types));
