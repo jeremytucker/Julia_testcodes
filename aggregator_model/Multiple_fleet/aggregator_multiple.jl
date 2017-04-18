@@ -23,7 +23,7 @@ if is_apple()
 end  
 
 #data 
-time = 8760  #[hrs]
+time = 9  #[hrs]
 data_p = readtable(ARGS[1])
 data_c = readtable("car_profiles/car_profile_commercial.csv")
 ini = 1
@@ -44,7 +44,7 @@ P_max_in = repmat(fleet_size',time,1).*(charger_power*k_power[1:time, 1:fleet_ty
 P_max_out = repmat(fleet_size',time,1).*(charger_power*k_power[1:time, 1:fleet_types]) #[kW]
 SOC_max = bat_size*repmat(fleet_size',time,1).*k_SOC[1:time, 1:fleet_types] #[kWh]
 SOC_min = bat_size*(1-contract_limit)*repmat(fleet_size',time,1).*k_SOC[1:time, 1:fleet_types] #[kWh]
-SOC_ini = fleet_size.*bat_size*0.045 #[kWh] 
+SOC_ini = fleet_size.*bat_size*0.05 #[kWh] 
 
 
 @variables agg begin
